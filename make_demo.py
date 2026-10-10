@@ -71,6 +71,15 @@ d.text((102, 427), DATA["reflection"], font=f(27, True), fill="#193b32")
 d.text((102, 503), "MIT licensed  •  Python standard library  •  Ollama + Qwen2.5-Coder", font=f(17), fill="#61715c")
 im.save(OUT / "slide-04.png")
 
+cover = Image.new("RGB", (1000, 420), "#193b32")
+cd = ImageDraw.Draw(cover)
+cd.rounded_rectangle((35, 35, 965, 385), radius=28, fill="#e9efda")
+cd.text((76, 73), "POCKET FIELD NOTES", font=f(23, True), fill="#648052")
+cd.text((76, 134), "A small field card", font=f(54, True), fill="#193b32")
+cd.text((76, 202), "for a bigger world.", font=f(54, True), fill="#193b32")
+cd.text((77, 313), "LOCAL OPEN-WEIGHT AI   •   PRINT IT   •   GO OUTSIDE", font=f(19, True), fill="#647957")
+cover.save(ROOT / "cover.png")
+
 subprocess.run(
     [
         "ffmpeg", "-y", "-loglevel", "error", "-framerate", "1/5", "-i",
