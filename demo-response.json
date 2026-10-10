@@ -1,0 +1,22 @@
+{
+  "title": "Color Quest",
+  "intro": "Read this card once, choose your own safe place, then let the screen go.",
+  "steps": [
+    {
+      "minutes": 5,
+      "action": "Walk at a comfortable pace on a route you choose.",
+      "notice": "What colors do you see?"
+    },
+    {
+      "minutes": 10,
+      "action": "Pause somewhere safe and look around.",
+      "notice": "Which colors stand out the most?"
+    },
+    {
+      "minutes": 5,
+      "action": "Continue or return on a route you choose.",
+      "notice": "What sounds do you hear?"
+    }
+  ],
+  "reflection": "What colors and sounds did you enjoy the most during your walk?"
+}

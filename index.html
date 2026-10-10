@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pocket Field Notes</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <div class="eyebrow">POCKET FIELD NOTES <span>✳</span> OFFLINE FIRST</div>
+      <h1>Close the tab.<br><em>Open your senses.</em></h1>
+      <p class="lede">A tiny local AI turns a few spare minutes into a screen-free observation quest. Pick a place you can reach safely, read the card, and put your phone away.</p>
+    </header>
+    <section class="builder" aria-label="Build a quest">
+      <div class="builder-head"><span>01 / MAKE A PLAN</span><span>NO ACCOUNT · NO LOCATION TRACKING</span></div>
+      <form id="quest-form">
+        <label>Time outside<select name="minutes"><option value="10">10 minutes</option><option value="20" selected>20 minutes</option><option value="30">30 minutes</option></select></label>
+        <label>Your setting<select name="setting"><option value="city sidewalk">City sidewalk</option><option value="park" selected>Park</option><option value="balcony or doorstep">Balcony or doorstep</option></select></label>
+        <label>Your pace<select name="pace"><option value="gentle walk" selected>Gentle walk</option><option value="sit and observe">Sit and observe</option></select></label>
+        <label>What to notice<select name="interest"><option value="color" selected>Color</option><option value="sound">Sound</option><option value="patterns">Patterns</option></select></label>
+        <button type="submit" id="generate">Make my field card <span>↗</span></button>
+      </form>
+      <p id="status" role="status" aria-live="polite"></p>
+    </section>
+    <section id="result" class="result" hidden aria-live="polite">
+      <div class="result-top"><span>02 / TAKE IT OUTSIDE</span><button id="print" type="button">Print card ↗</button></div>
+      <div class="card">
+        <div class="card-kicker">YOUR POCKET QUEST <span>✳</span></div>
+        <h2 id="quest-title"></h2><p id="quest-intro"></p>
+        <ol id="quest-steps"></ol>
+        <div class="reflection"><b>AFTERWARDS</b><p id="quest-reflection"></p></div>
+      </div>
+      <p class="footnote">Choose your own safe route. This app never checks live weather, access, or hazards.</p>
+    </section>
+    <footer>Built with an open-weight Qwen model running in Ollama on your own machine. No map API. No cloud inference. No login.</footer>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
